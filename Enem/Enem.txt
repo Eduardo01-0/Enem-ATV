@@ -1,0 +1,46 @@
+O cursinho "Personalize" precisa de um sistema para gerenciar seu banco de questões do ENEM e treinar os alunos. O sistema deve permitir que os professores cadastrem perguntas e que os alunos façam um simulado respondendo a elas.
+
+Para esse projeto você criara uma pasta chamada ENEM contendo:
+database.py (arquivo de interação com o banco)
+enem.py (arquivo com as funções do programa)
+app.py (arquivo com a logica para chamar as funções do enem.py)
+
+1. Criação do Banco de Dados (Tabelas):
+
+Tabela QUESTOES: 
+ID (Chave Primária), 
+MATERIA (Ex: Matemática, História), 
+ANO (Ex: 2026), 
+ENUNCIADO, 
+OPCAO_A, 
+OPCAO_B, 
+OPCAO_C, 
+OPCAO_D, 
+OPCAO_E, 
+RESPOSTA_CORRETA (Uma letra: A, B, C, D ou E).
+
+Tabela RESULTADOS: 
+ID (Chave Primária), 
+NOME_ALUNO, 
+ID_QUESTAO (Chave Estrangeira), 
+RESPOSTA_DADA, 
+ACERTOU (Booleano: True/False ou 1/0).
+
+2. Menu do Sistema:
+
+1-Cadastrar Questão (Apenas Professor)
+
+2-Listar Questões Cadastradas
+
+3-Excluir Questão (Apenas Professor)
+
+4-Fazer Simulado (Aluno responde todas as questões)
+
+5-Ver Histórico de Desempenho
+
+6-Sair
+
+Cuidados e Regras do Simulado:
+Ao entrar na opção 4 (Fazer Simulado), o sistema deve pedir o nome do aluno, listar as questões uma a uma exibindo o enunciado e as opções, e pedir a resposta (A, B, C, D ou E).
+O sistema deve verificar se a resposta bate com a RESPOSTA_CORRETA do banco. 
+Ao final, deve registrar no banco se ele acertou ou errou cada questão e mostrar a pontuação total (ex: "Você acertou 3 de 5 questões!").
